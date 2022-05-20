@@ -2,7 +2,6 @@ package com.coforge.departmentservice.controller;
 
 
 import com.coforge.departmentservice.entity.Department;
-import com.coforge.departmentservice.service.DepartmentService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +19,7 @@ public class DepartmentControllerTest {
 
     @Test
     public void getDepartmentTets(){
+        System.out.println("Entering into getDepartmentTest >>>");
         Department[] departments = testRestTemplate.getForObject("http://localhost:"+port+"/departments", Department[].class);
         Assertions.assertEquals(2, departments.length);
     }
