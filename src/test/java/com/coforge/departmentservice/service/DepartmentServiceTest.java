@@ -8,7 +8,8 @@ public class DepartmentServiceTest {
 
     @Test
     public void getDepartmentsTest(){
-    DepartmentService departmentService = new DepartmentServiceImpl();
+    System.out.println("test edit");
+	    DepartmentService departmentService = new DepartmentServiceImpl();
         Assertions.assertEquals(2,departmentService.getDepartments().size());
     }
 }
